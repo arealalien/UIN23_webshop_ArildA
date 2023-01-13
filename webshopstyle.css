@@ -233,11 +233,32 @@ html, body {
 }
 .navbar-item {}
 .navbar-item-inner {
+    position: relative;
     color: hsl(var(--white));
     font-weight: 300;
     text-decoration: none;
 }
 .navbar-item-inner:visited {
+    color: hsl(var(--white));
+}
+.navbar-item-inner:after {
+    left: 0; bottom: 3px;
+    width: 100%; height: 1px;
+    content: "";
+    position: absolute;
+    background-color: hsl(var(--white));
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .35s cubic-bezier(var(--transition-main), 1.05);
+}
+.navbar-item-inner:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.navbar-item-inner:visited {
+    color: hsla(var(--white), .66);
+}
+.navbar-item-inner:visited:hover {
     color: hsl(var(--white));
 }
 /* Header */
@@ -333,7 +354,15 @@ html, body {
 }
 .product-card-title {
     margin: 0;
+    max-width: 100%; max-height: 2rem;
+    display: -webkit-box;
     font-size: calc(var(--paragraph) + .2rem);
+    line-height: 1.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .product-card-price {
     margin: 0;
@@ -363,13 +392,20 @@ html, body {
     position: absolute;
     color: hsl(var(--white));
     background-color: hsla(var(--white), .15);
+    box-shadow: 0 5px 17px -7px hsla(var(--black), .44);
     backdrop-filter: blur(.8rem);
     font-weight: 300;
     letter-spacing: .1em;
     text-transform: uppercase;
     border: none;
     cursor: pointer;
+    transition: all .3s cubic-bezier(var(--transition-main), 1.075);
     z-index: 5;
+}
+.product-card-button:hover {
+    bottom: .33em;
+    background-color: hsla(var(--white), .175);
+    box-shadow: 0 5px 17px -7px hsla(var(--black), .88);
 }
 /* Footer */
 #footer {
@@ -411,12 +447,39 @@ html, body {
 }
 .footer-item {}
 .footer-item-inner {
+    position: relative;
     color: hsl(var(--white));
     font-weight: 300;
     text-decoration: none;
 }
 .footer-item-inner:visited {
     color: hsl(var(--white));
+}
+.footer-item-inner:after {
+    left: 0; bottom: 3px;
+    width: 100%; height: 1px;
+    content: "";
+    position: absolute;
+    background-color: hsl(var(--white));
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .35s cubic-bezier(var(--transition-main), 1.05);
+}
+.footer-item-inner:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.footer-item-inner:visited {
+    color: hsla(var(--white), .66);
+}
+.footer-item-inner:visited:hover {
+    color: hsl(var(--white));
+}
+.footer-item-button {
+    display: block;
+    color: hsl(var(--white));
+    font-weight: 300;
+    text-decoration: none;
 }
 .footer-item-button span {
     padding: 1em 3em;
@@ -439,4 +502,74 @@ html, body {
 }
 ::-webkit-scrollbar-thumb {
     background-color: hsl(var(--primary));
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1660px) {
+    :root {
+        /* Sizes */
+        --heading-large: 5.4rem;
+        --heading-medium: 3.4rem;
+        --heading-small: 2.3rem;
+    }
+}
+
+@media only screen and (max-width: 1456px) {
+    :root {
+        /* Sizes */
+        --heading-large: 5.2rem;
+        --heading-medium: 3.2rem;
+        --heading-small: 2.2rem;
+    }
+    .promo-card-title, .promo-card-price {
+        padding: 0 7.5rem 0 0;
+    }
+}
+
+@media only screen and (max-width: 1220px) {
+
+}
+
+@media only screen and (max-width: 1024px) {
+    :root {
+        /* Sizes */
+        --heading-large: 5rem;
+        --heading-medium: 3rem;
+        --heading-small: 2.1rem;
+    }
+    .navbar-items {
+        display: none;
+    }
+    .promo-card-title, .promo-card-price {
+        padding: 0 5rem 0 0;
+    }
+    .product-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 756px) {
+    :root {
+        /* Sizes */
+        --heading-large: 4rem;
+        --heading-medium: 2.6rem;
+        --heading-small: 2rem;
+        --paragraph: 1rem;
+    }
+    .promo-card-title, .promo-card-price {
+        padding: 0;
+    }
+    .product-cards {
+        grid-template-columns: 1fr;
+        column-gap: 1em;
+        row-gap: 5em;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+}
+
+@media only screen and (max-width: 496px) {
+
 }
