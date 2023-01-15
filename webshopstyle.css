@@ -261,6 +261,22 @@ html, body {
 .navbar-item-inner:visited:hover {
     color: hsl(var(--white));
 }
+.navbar-item-button {
+    position: relative;
+}
+.navbar-button-note {
+    top: -1.1em; left: -1.1em;
+    margin: 0;
+    width: 2em; height: 2em;
+    position: absolute;
+    font-size: .8rem;
+    background-color: hsl(var(--primary));
+    border-radius: 50%;
+    color: hsl(var(--white));
+}
+.navbar-item-button svg {
+    width: 1.4em;
+}
 /* Header */
 #header {
     height: 70vh;
