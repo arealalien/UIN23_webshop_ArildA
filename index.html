@@ -42,9 +42,9 @@
                 <li class="navbar-item"><a href="" class="navbar-item-inner">Womens</a></li>
                 <li class="navbar-item"><a href="" class="navbar-item-inner">Mens</a></li>
                 <li class="navbar-item"><a href="" class="navbar-item-inner">Favorites</a></li>
-                <li class="navbar-item">
-                    <a href="" class="navbar-item-button flexbox">
-                        <p class="navbar-button-note flexbox">3</p>
+                <li class="navbar-item navbar-item-last">
+                    <a class="navbar-item-button flexbox">
+                        <p class="navbar-button-note flexbox">0</p>
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1">
                             <title>Iconly/Curved/Bag 2</title>
                             <g id="Iconly/Curved/Bag-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
@@ -60,6 +60,17 @@
         </div>
     </div>
 </nav>
+
+<section class="cart-menu flexbox">
+    <div class="cart-menu-inner flexbox-right view-width">
+        <div class="cart-menu-wrapper flexbox-col-left-ns">
+            <h3 class="cart-menu-title flexbox-space-bet"><span>Your Cart</span><span class="cart-length"></span></h3>
+            <ul class="cart-menu-items">
+                <p class="cart-menu-note">Your cart is empty</p>
+            </ul>
+        </div>
+    </div>
+</section>
 
 <!-- HEADER -->
 <header id="header" class="flexbox">
@@ -98,7 +109,7 @@
                 <p class="product-card-price">$69,99</p>
             </div>
             <div class="product-card-image-wrapper flexbox">
-                <button class="product-card-button">Buy Now</button>
+                <button class="product-card-button" onClick="addToCart('Deep Black Shirt', 69,99)">Buy Now</button>
                 <img class="product-card-image" src="https://images.unsplash.com/photo-1609543563735-d7cfaf71addb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" alt="">
             </div>
         </article>
@@ -108,7 +119,7 @@
                 <p class="product-card-price">$79,99</p>
             </div>
             <div class="product-card-image-wrapper flexbox">
-                <button class="product-card-button">Buy Now</button>
+                <button class="product-card-button" onClick="addToCart('Black Hole Crewneck', 79,99)">Buy Now</button>
                 <img class="product-card-image" src="https://images.unsplash.com/photo-1604004382519-f8dd5f1237c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" alt="">
             </div>
         </article>
@@ -118,7 +129,7 @@
                 <p class="product-card-price">$109,99</p>
             </div>
             <div class="product-card-image-wrapper flexbox">
-                <button class="product-card-button">Buy Now</button>
+                <button class="product-card-button" onClick="addToCart('The Black Checkmate', 109,99)">Buy Now</button>
                 <img class="product-card-image" src="https://images.unsplash.com/photo-1576800774081-68c65e87becc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2022&q=80" alt="">
             </div>
         </article>
@@ -128,7 +139,7 @@
                 <p class="product-card-price">$89,99</p>
             </div>
             <div class="product-card-image-wrapper flexbox">
-                <button class="product-card-button">Buy Now</button>
+                <button class="product-card-button" onClick="addToCart('Dark Sea Hoodie', 89,99)">Buy Now</button>
                 <img class="product-card-image" src="https://images.unsplash.com/photo-1514416497375-12bed6955a25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1536&q=80" alt="">
             </div>
         </article>
@@ -138,7 +149,7 @@
                 <p class="product-card-price">$159,99</p>
             </div>
             <div class="product-card-image-wrapper flexbox">
-                <button class="product-card-button">Buy Now</button>
+                <button class="product-card-button" onClick="addToCart('Dark Dreams Dress', 159,99)">Buy Now</button>
                 <img class="product-card-image" src="https://images.unsplash.com/photo-1633381521050-26bb467d9d5a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" alt="">
             </div>
         </article>
