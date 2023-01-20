@@ -292,7 +292,7 @@ html, body {
 .cart-menu-inner {}
 .cart-menu-wrapper {
     padding: 1.4em;
-    width: 40%; max-height: 25em;
+    width: 40%; max-height: 45vh;
     border-radius: 4px;
     background: linear-gradient(45deg, hsla(var(--white), .045) 0%, hsla(var(--white), .085) 100%);
     background-size: 500%;
@@ -325,6 +325,10 @@ html, body {
     background-color: transparent;
 }
 .cart-menu-items::-webkit-scrollbar-thumb {
+    background-color: hsla(var(--white), .22);
+    border-radius: 100vw;
+}
+.cart-menu-items:hover::-webkit-scrollbar-thumb {
     background-color: hsla(var(--white), .33);
     border-radius: 100vw;
 }
@@ -341,7 +345,7 @@ html, body {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr repeat(3, auto);
-    gap: .5em;
+    gap: 1em;
     place-items: center flex-start;
     font-size: var(--paragraph);
     font-weight: 300;
@@ -359,16 +363,17 @@ html, body {
     overflow: hidden;
 }
 .cart-remove {
-    margin: 0 0 0 1em; padding: .66em;
+    margin: 0 0 0 .25em; padding: .6em;
     background-color: hsl(var(--primary));
     border-radius: 50%;
+    border: none;
     cursor: pointer;
 }
 .cart-remove svg {
     width: .6em; height: .6em;
 }
 .cart-menu-total {
-    padding: .6em 0 0 0;
+    padding: .66em 0 0 0;
     width: 100%;
     color: hsl(var(--white));
     border-top: 1px solid hsla(var(--white), .185);
